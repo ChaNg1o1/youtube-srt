@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube SRT 字幕助手",
+  "version": "1.1",
+  "description": "在YouTube中注入转录SRT字幕的扩展。",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "YouTube SRT 设置",
+    "default_icon": {
+      "128": "images/icon128.png"
+    }
+  },
+  "icons": {
+    "128": "images/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/watch*"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ]
+}
